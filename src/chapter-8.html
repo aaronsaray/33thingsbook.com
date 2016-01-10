@@ -1,0 +1,27 @@
+<article>
+    <h1>#8. When In Trouble, Break Up <small>Programming and not relationship advice</small></h1>
+
+    <p>If you think way, way back to learning your alphabet, you probably learned it from a to z immediately, in one go. You didn’t say ‘a b c d e&#8230;’ over and over until you learned ‘f g&#8230; h i&#8230;’ No, you knew it immediately from start to finish.</p>
+
+    <p>No? Then why do programmers force themselves to do everything in complete packages? When expected to add a new system or interface to the software, most programmers will try to build the entire thing all at once. I would argue against this philosophy of start to finish. Instead, try something different. There is value in breaking things up.</p>
+
+    <p>One of the programmers on my team had to work with our software’s authentication system to integrate an LDAP solution. He was rather new to our custom authentication model and to LDAP. He began the project by making a new interface for our authentication system and then applying LDAP settings to it. He was stuck almost immediately. His lack of understanding of both our authentication system in addition to his recent introduction to the LDAP protocol combined to make even the simplest of steps overly complex.</p>
+
+    <p>I told him that he was trying to do too much. Instead, let’s break it down into pieces. First, spend some time learning the authentication system. Do not create the LDAP process yet. Just authenticate correctly, incorrectly, try to break it, etc. Watch how the system responds. Use debugging features to track through the code to see how it works. Learn the current system. That’s the first step.</p>
+
+    <p>The next logical thought for most programmers is predictable. “Ok, after that, then I’ll create my own interface in this system and add the LDAP support.” But, that’s wrong, I cautioned him. After you understand how our system works, create a new, very simple application. Create your own very simple, non abstract, hard-coded LDAP routine to authenticate. Use this to learn how the protocol works. Authenticate, fail, try to break it. Repeat the same processes as you used to learn our authentication model.</p>
+
+    <p>Only after both of these steps were complete, I told him, then combine the pieces. By now, he would have known how our authentication system works and how LDAP works. The combination then is just purely adaptive programming. He doesn’t need to learn multiple things at once. Instead, he can focus on one thing at a time now: integrating two known technologies.</p>
+
+    <p>Sometimes we can be in a rush to implement new technology. Just copy and paste some code into the application and we’re good to go. However, more often than not, this introduces more bugs and more false-starts than learning each part separately. </p>
+
+    <p>Another example I work with often has to do with complex HTML and CSS layout issues. We’ve created a very complex site with a lot of features. The final piece of the puzzle is being added, but the dimensions and placement of this feature are just not working right. No matter what, the web designer can’t seem to get it placed properly.</p>
+
+    <p>As you can guess, there are two approaches here. First, keep pounding your head against the wall and try every conceivable combination possible. You’re bound to <span>(accidentally)</span> come across the solution. Who needs to hit the deadline! Timeliness be damned! Or, the second approach is to break it up.</p>
+
+    <p>Create the feature on a new, completely blank page. Get rid of any scaffolding CSS and base markup. Validate that you can do the complex placement without any other layout affecting the feature. Once that is complete, slowly add on pieces of the existing page. First, add on the scaffolding, but no content or major layout. Then, add in the page layout. Then, add in the content. Along this path, at some point, the properly formatted and positioned original feature in question will skew. This process allowed the designer to narrow down the factors that were affecting the feature. It is much easier to fix the problem now.</p>
+
+    <p>In programming communities, there is much discussion about proper design methodologies and patterns. Some argue about the conciseness of classes or methods. Others will point to the necessity to use procedural programming over object oriented programming based on the task to be completed. But, if you look at the core of all these discussions, it’s a focus of making something simpler, cleaner, more efficient, and independent. Programmers are constantly looking for ways to reduce spaghetti code and make components instead of dependencies. You never hear someone argue for the fact of combining all the code into a completely cyclical mass of indistinguishable source. Everyone wants to make it simple and modular, based on their best guess of how to do this. Programmers are continually trying to break code up into manageable pieces.</p>
+
+    <p>Since we already focus on making individual components of the simplest pieces as a programming architecture methodology, why not use this same idea elsewhere? Whether you’re creating new software or troubleshooting existing problems, break it up. Smaller pieces are always easier to solve.</p>
+</article>

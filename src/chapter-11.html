@@ -1,0 +1,27 @@
+<article>
+    <h1>#11. Give Proper Visual Cues <small>&lt;blink> is my favorite HTML tag!</small></h1>
+
+    <p>All good applications validate and error-check user information. The time will come when you are required to alert the user that the input they gave does not pass the sanity check. Usually this done via some visual notice or cue. </p>
+
+    <p>It is important to understand that there is a difference between what is programmatically wrong with the data, that thing that has been flagged by the programming logic, and what the average user will understand as the flawed data entry. Humans interpret invalid data differently than a computer. </p>
+
+    <p>For example, when two pieces of information do not match equally, a logical program deems both pieces of data as inaccurate. Both pieces either need to be identical, making the relationship true, or the entire data and relationship is false. </p>
+
+    <p>That is not how humans interpret the information. Instead, humans logically approach the data individually in a linear fashion. If the data is marked incorrect, it’s human nature to look at the first <span>(or last, depending on the personality&#8230; I’m talking to you glass-half-empty people!)</span> data piece and determine if there is an error. However, what’s different than a logical computer program is the tendency to not consider the data wrong when in context of the whole, but rather individually wrong. The user generally tends not to look for the relationship error, but looks for the concrete individual data error.</p>
+
+    <p>A good example of this is when there are two corresponding input forms on an interface. Perhaps this could be a password and confirm password field. Or even better, I have an example that recently happened with one of the programmers on my team.</p>
+
+    <p>He was creating a calendar application that allowed the user to enter a new event. The event had a title, a description, a start date and an end date. One of the validation steps was to make sure that the end date was either equal to or after the start date.</p>
+
+    <p>When the programmer wrote the validation, he attached the logic to both form fields. The code said to take both form fields and compare the values. If the first was after the second, mark them as error. The submitted interface marked both field as an error and alerted the user that the end date must be after the start date.</p>
+
+    <p>Unfortunately for the programmer, I rejected this code. I said that the error for the user wasn’t in both fields, it was only one error. Marking both fields technically means there are two errors. Instead, alert the user one time to say that the start date must be before the end date. The code came back with the start date being marked with an error saying the start date must be before the end date. I rejected this code again.</p>
+
+    <p>I understand why the programmer decided why that placement was where the error should be. He was almost right, too! However, it wasn’t good enough yet. Why?</p>
+
+    <p>If you look at the way that people think about event dates, there is a greater chance that they’ll know the start date rather than the end date. When you’re entering in data, the farther down on the interface, the more you’re likely to make a mistake. Generally, the end date is after the start date on the interface. So, combine the fact that most people remember when their event starts more accurately than when it ends and the location of the field on the interface, the field to be marked with an error should be the end date. That is where the error must be shown. </p>
+
+    <p>To drive it home, I asked the programmer “can you imagine a time when you’re filling out this form and you forget to fill in the end date? How about a scenario when you filled in the end date properly, but you forgot to add a start date?” He said the first scenario was much more likely. He admitted it seemed much more clear now.</p>
+
+    <p>Visual cues should be given with a thought to their context. A good programmer may remember to haphazardly place the cues. A great programmer pays attention to context and logical user interface.</p>
+</article>
